@@ -1,0 +1,26 @@
+<?php
+// Conectando, seleccionando la base de datos inversiontucasa
+
+
+class Conexion
+{
+
+	private $serverName = "localhost";
+	private $username = "root";
+	private $password = "Kaizen360";
+	private $database = "phpcrud";
+	private $conexion;
+	public function __construct()
+	{
+		$this->conexion = mysqli_connect( $this->serverName, $this->username, $this->password, $this->database );
+		$this->conexion->set_charset( "utf8" );
+	}
+	public function getConexion()
+	{
+		return $this->conexion;
+	}
+	public function CerrarConexion()
+    {
+        mysqli_close( $this->conexion );
+    }
+}
