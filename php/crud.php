@@ -11,19 +11,22 @@ $apellidom = $_POST['apellidomw'];
 
 	try {
 
-		$conn = mysqli_connect("localhost", "root", "", "prueba");
-		//$PDO=new PDO('mysql:host=localhost;port=port=3306;dbname=crudphp;','root','');
-		if($conn === false){
-		    die("ERROR DE CONEXION " . mysqli_connect_error());
-		}
+		//$conn = mysqli_connect("localhost", "root", "", "prueba");
+		$PDO=new PDO('mysql:host=localhost;port=port=3306;dbname=prueba;','root','');
 
-		$sql = "INSERT INTO datos (nombre, apellidopaterno) VALUES ('$nombre', '$apellidopaterno')";
-		//$sql=$conn->prepare("INSERT INTO formulario (nombre,apellidop,apellidom,edad,anio,fecha) VALUES (:nombre, :apellidop, :apellidom, :edad, :anio, :fecha)");
-		if(mysqli_query($conn, $sql)){
-		    echo "Datos guardados correctamente";
-		} else{
-		    echo "ERROR: Could not able to execute $sql. " . mysqli_error($link);
-		}
+
+		//$sql = "INSERT INTO datos (nombre, apellidopaterno) VALUES ('$nombre', '$apellidopaterno')";
+
+
+		 //$sql=$conn->prepare("INSERT INTO datos (nombre,apellidopaterno) VALUES ($nombre, $apellidopaterno)");
+
+		$sql= $PDO -> prepare ("INSERT INTO datos(nombre, apellidopaterno) VALUES (:nombre , :apellidopaterno)");
+
+ 	//	$sentencia = $PDO -> prepare($sql);
+ 		$sql -> bindParam(':nombre', $nombre );
+ 		$sql -> bindParam(':apellidopaterno', $apellidopaterno );
+		$sql -> execute();
+
 	/*	$sql->bindParam(':nombre',$nombre);
 		$sql->bindParam(':apellidop',$apellidop);
 		$sql->bindParam(':apellidom',$apellidom);
