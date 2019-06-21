@@ -1,0 +1,12 @@
+*{
+	margin: 0;
+	padding: 0;
+}
+
+header,div,section,form{
+	display: block;
+}
+
+div#contenedor{
+	margin: 50px 50px 50px 50px;
+}

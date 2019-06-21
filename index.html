@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+	<meta charset="UTF-8">
+	<title>Document</title>
+	<link rel="stylesheet" href="css/bootstrap.css">
+	<link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+	<div id="contenedor">
+		<form action="php/recibir.php" method="POST">
+		  <div class="form-group">
+		    <label for="exampleInputEmail1">NOMBRE</label>
+		    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="nombre" name="nombre">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">APELLIDOP</label>
+		    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="apellido" name="apellidop">
+		  </div>
+			<div class="form-group">
+		    <label for="exampleInputPassword1">APELLIDOM</label>
+		    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="apellido" name="apellidom">
+		  </div>
+		  <div class="form-group">
+		    <label for="exampleInputPassword1">EDAD</label>
+		    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="edad" name="edad">
+		  </div>
+
+		  <select class="form-control" name="selects">
+			  <option>2010</option>
+			  <option>2011</option>
+			  <option>2030</option>
+			  <option>2040</option>
+			  <option>2050</option>
+		</select>
+
+		<label for="fecha">calendario</label>
+		<input type="date" name="fecha"> 
+		  
+		  <button type="submit" class="btn btn-default">Submit</button>
+	</form>
+</div>
+	
+</body>
+
+
+
+</html>
