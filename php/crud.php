@@ -4,7 +4,7 @@
 	$nombre = $_POST['nombrew'];
 	$apellidopaterno = $_POST['apellidopw'];
 	/*
-  $apellidom = $_POST['apellidomw'];
+$apellidom = $_POST['apellidomw'];
 	$edad = $_POST['edadw'];
 	$anio = $_POST['aniow'];
 	$fecha = $_POST['fechaw'];*/
@@ -27,7 +27,7 @@
  		$sql -> bindParam(':apellidopaterno', $apellidopaterno );
 		$sql -> execute();
 
-	/*$sql->bindParam(':nombre',$nombre);
+	/*	$sql->bindParam(':nombre',$nombre);
 		$sql->bindParam(':apellidop',$apellidop);
 		$sql->bindParam(':apellidom',$apellidom);
 		$sql->bindParam(':edad',$edad);
@@ -38,6 +38,8 @@
 		echo '<script>
 		alert("datos enviados con exito");
 		</script>';
+
+
 
 	} catch (PDOException $e) {
 		echo 'Error' .$e->getMessage();

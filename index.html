@@ -5,19 +5,56 @@
 	<title>Document</title>
 	<link rel="stylesheet" href="css/bootstrap.css">
 	<link rel="stylesheet" href="css/styles.css">
+	<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/normalize/5.0.0/normalize.min.css">
+	<!--
+	<script type="text/javascript" src="js/script.js"></script>
+	<script type="text/javascript" src="http://ajax.googleapis.com/ajax/libs/jquery/1.7.1/jquery.min.js"></script>	-->
+
+
+
+
 	<title>Menu</title>
 
+<style>
 
+@import url("//fonts.googleapis.com/css?family=Bungee+Shade");
+
+
+h1 {
+  color: #FFFFFF;
+  margin-top: 100px;
+  font-size: 50px;
+  text-align: center;
+	font-family: "Bungee Shade";
+}
+@media screen and (max-width: 850px) {
+  h1 {
+    font-size: 2em;
+  }
+}
+@media screen and (max-width: 550px) {
+  h1 {
+    font-size: 1.5em;
+  }
+}
+
+
+</style>
 
 </head>
+
 <body>
 
-<ul>
-<li><a href="php/insertar.php"> Insertar </a></li>
+<h1 id="messageLabel">Hello World! || I'm Alex</h1>
+
+<nav>
+<ul class="menu">
+<li><a href="php/insertar.php"> Agregar </a></li>
 <li><a href="php/mostrar.php"> Mostrar </a></li>
 <li><a href="php/actualizar.php"> Actualizar </a></li>
+<li><a href="php/borrar.php"> Borrar </a></li>
 </ul>
-
+</nav>
 
 	</div>
 
@@ -26,3 +63,33 @@
 
 
 </html>
+
+<script type="text/javascript">
+var message = "Diccionario";
+var msgCount = 0;
+var blinkCount = 0;
+var blinkFlg = 0;
+var timer1, timer2;
+var messageLabel = document.getElementById("messageLabel");
+
+function textFunc() {
+	 messageLabel.innerHTML = message.substring(0, msgCount);
+
+	 if (msgCount == message.length) {
+			// Stop Timer
+			clearInterval(timer1);
+
+			// Start blinking animation!
+			timer2 = setInterval("blinkFunc()", 200);
+
+	 } else {
+			msgCount++;
+	 }
+}
+
+
+
+
+timer1 = setInterval("textFunc()", 150); // Every 150 milliseconds
+
+</script>
