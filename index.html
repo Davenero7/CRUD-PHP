@@ -22,7 +22,7 @@
 
 h1 {
   color: #FFFFFF;
-  margin-top: 100px;
+
   font-size: 50px;
   text-align: center;
 	font-family: "Bungee Shade";
@@ -45,14 +45,27 @@ h1 {
 
 <body>
 
-<h1 id="messageLabel">Hello World! || I'm Alex</h1>
+<h1 id="messageLabel"></h1>
+
+
+<div align="center" >
+	<a style="align: center;" id="messageLabel2">
+	   <!--     <img src="/carpeta/archivo.png" />    -->
+
+	</a>
+</div>
+
+<!--  <img src="corazon.png" alt=""> -->
+
+
 
 <nav>
 <ul class="menu">
 <li><a href="php/insertar.php"> Agregar </a></li>
 <li><a href="php/mostrar.php"> Mostrar </a></li>
-<li><a href="php/actualizar.php"> Actualizar </a></li>
-<li><a href="php/borrar.php"> Borrar </a></li>
+<li><a href="php/actualizar.php"> Actualizar  </a></li>
+<!--  <li><a href="php/borrar.php"> Borrar </a></li> -->
+
 </ul>
 </nav>
 
@@ -65,15 +78,24 @@ h1 {
 </html>
 
 <script type="text/javascript">
-var message = "Diccionario";
+var message = "Diccionario  de Reyna";
+var rutaimagen =  '<img src="corazon.png" />';        
 var msgCount = 0;
+var msgCount2 = 0;
 var blinkCount = 0;
 var blinkFlg = 0;
 var timer1, timer2;
 var messageLabel = document.getElementById("messageLabel");
+var imagen = document.getElementById("messageLabel2");
 
 function textFunc() {
+
 	 messageLabel.innerHTML = message.substring(0, msgCount);
+
+	 //imagen.innerHTML = rutaimagen;
+
+//imagen.innerHTML="<img src='"corazon.png"'>"
+	 //message.substring(0,msgCount);
 
 	 if (msgCount == message.length) {
 			// Stop Timer
@@ -82,14 +104,30 @@ function textFunc() {
 			// Start blinking animation!
 			timer2 = setInterval("blinkFunc()", 200);
 
+
 	 } else {
 			msgCount++;
+//imagen.innerHTML = rutaimagen;
 	 }
+	 imagen.outerHTML = rutaimagen;
+
 }
 
 
 
 
-timer1 = setInterval("textFunc()", 150); // Every 150 milliseconds
+
+timer1 = setInterval("textFunc()", 100); // Every 150 milliseconds
 
 </script>
+
+<!--
+<script type="text/javascript">
+function prueba(){
+// var ruta =  "<img src="corazon">";
+var imagenn = document.getElementById("demo");
+
+//document.getElementById("demo").innerHTML = "<img src="corazon.png">";
+imagenn.innerHTML = '<img src="corazon.png" />';
+}
+</script>-->

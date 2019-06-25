@@ -10,11 +10,12 @@
 	<div id="contenedor">
 		<form action="crud.php" method="POST">
 		  <div class="form-group">
-		    <label for="exampleInputEmail1">NOMBRE</label>
-		    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese su nombre" name="nombrew">
+		    <label style="color:white;" for="exampleInputEmail1">Palabra</label>
+		    <input type="text" class="form-control" id="exampleInputEmail1" placeholder="Ingrese la Palabra" name="nombrew">
 		  </div>
 		  <div class="form-group">
-		    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Apellido Paterno" name="apellidopw">
+				<label style="color:white;" for="exampleInputEmail1">Definición</label>
+		    <input type="text" class="form-control" id="exampleInputPassword1" placeholder="Ingrese la Definición" name="apellidopw">
 		  </div>
 
 			<!--
